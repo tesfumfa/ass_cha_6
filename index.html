@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+      integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Weather Dashboard</title>
+  </head>
+
+  <body>
+    <header>
+      <h1><strong>Weather Dashboard</strong></h1>
+    </header>
+
+    <main class="container">
+      <!-- jumbotron -->
+      <!-- cards -->
+      <div class="row">
+        <div class="col-sm-3">
+          <h4 class="searchCityHeader">Search for a City:</h4>
+          <form class="input-group mb-3">
+          <input type="text" class="inputValue" id="inputValue" placeholder="Enter your city" />
+          <div class="input-group-append">
+            <button class="searchBtn btn btn-primary" id="searchButton" type="button">            <i>
+              <span class="oi oi-magnifying-glass"></span>
+            </i> </button>
+          </div>
+        </form>
+        <button class="btn btn-primary mb-3" type="button" id="clearHistory">Clear</button>
+          <form id="recent"></form>
+          <!-- <ul class="cities"> -->
+            <!-- drop lis -->
+          </ul>
+        </div>
+
+        <div class="col-sm-9 display">
+          <!-- JUMBO city, date, temp, humidity, wind speed, uvi -->
+          <div class="current-weather hide card">
+            <h2 class="city-date-icon"></h2>
+            <p class="temp"></p>
+            <p class="humidity"></p>
+            <p class="wind"></p>
+            <p class="uvi">
+              UV Index:
+              <!-- i inline block -->
+              <i class="uviValue"></i>
+            </p>
+          </div>
+
+          <!-- 5 day forecast -->
+          <!-- <h4>5-Day Forecast</h4> -->
+          <!-- display flex -->
+          <div class="d-flex five-day-forecast">
+            <h3 class="fiveDayHeader"></h3>
+            <br />
+            <!-- cards with JS -->
+            <div id="cards" class="col-12 d-flex"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
